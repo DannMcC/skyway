@@ -1,0 +1,28 @@
+.landing {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  //align-items: center;
+
+  .help {
+    background-color: #1f204f;
+    flex: 1;
+
+    .help-text {
+      margin-top: 33vh;
+      color: #5bd692;
+      text-align: center;
+    }
+  }
+
+  .start {
+    flex: 1;
+    background-color: #5bd692;
+
+    .start-text {
+      margin-top: 33vh;
+      color: #1f204f;
+      text-align: center;
+    }
+  }
+}

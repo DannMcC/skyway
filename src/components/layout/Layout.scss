@@ -1,4 +1,4 @@
-.landing {
+.layout {
   display: flex;
   height: 100vh;
   justify-content: space-around;
@@ -6,28 +6,20 @@
   //background: linear-gradient(250deg, #4bf05a, #0050ff, #93008c, #ff4e77, #ff6f2f, #ff204d);
   background-size: 1200% 1200%;
   animation: background 60s ease infinite;
-  //animation: color_wheel 20s infinite;
 
-  .help {
-    //background-color: #1f204f;
+  h1 {
+    //font: 32pt, 'OnedayFF';
+    font-family: 'OnedayFF', serif;
+    color: #f2f0e7;
     flex: 1;
-
-    .help-text {
-      margin-top: 33vh;
-      color: #edeae0;
-      text-align: center;
-    }
+    padding-left: 10px;
   }
 
-  .start {
-    flex: 1;
-    //background-color: #5bd692;
-
-    .start-text {
-      margin-top: 33vh;
-      color: #edeae0;
-      text-align: center;
-    }
+  h2 {
+    color: white;
+    font-family: 'OnedayFF', serif;
+    padding-right: 10px;
+    flex: 0;
   }
 
   @keyframes background {
@@ -35,4 +27,9 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0 50%; }
   }
+}
+
+@font-face {
+  font-family: 'OnedayFF';
+  src: url('./OnedayFF/ONEDAY.otf') format('opentype');
 }

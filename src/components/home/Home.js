@@ -4,7 +4,7 @@ class Home extends Component {
 
   render () {
     return <div className='landing'>
-      <container className='help'>
+      {/* <container className='help'>
         <section className='help-text'>
           <p>I want to</p>
           <h1>Help</h1>
@@ -19,7 +19,7 @@ class Home extends Component {
           <p>a project</p>
           <button>Get Started</button>
         </section>
-      </container>
+      </container> */}
     </div>
   }
 }

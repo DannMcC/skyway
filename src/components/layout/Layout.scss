@@ -1,31 +1,51 @@
 .layout {
-  display: flex;
-  height: 100vh;
-  justify-content: space-around;
-  background: linear-gradient(235deg, #1d81ce, #028246, #27b845, #fda241, #f1614d, #1d81ce);
-  //background: linear-gradient(250deg, #4bf05a, #0050ff, #93008c, #ff4e77, #ff6f2f, #ff204d);
-  background-size: 1200% 1200%;
-  animation: background 60s ease infinite;
+  // height: 100%;
+  // justify-content: space-around;
+  // background: linear-gradient(235deg, #1d81ce, #028246, #27b845, #fda241, #f1614d, #1d81ce);
+  // //background: linear-gradient(250deg, #4bf05a, #0050ff, #93008c, #ff4e77, #ff6f2f, #ff204d);
+  // background-size: 1200% 1200%;
+  // animation: background 60s ease infinite;
 
-  h1 {
-    //font: 32pt, 'OnedayFF';
-    font-family: 'OnedayFF', serif;
-    color: #f2f0e7;
-    flex: 1;
-    padding-left: 10px;
-  }
+  header {
+    display: flex;
+    margin-top: 0;
+    height: 65px;
 
-  h2 {
-    color: white;
-    font-family: 'OnedayFF', serif;
-    padding-right: 10px;
-    flex: 0;
-  }
+    h1 {
+      //font: 32pt, 'OnedayFF';
+      //font-family: $header-font, serif;
+      margin-top: 5px;
+      font-family: 'OnedayFF', serif;
+      font-size: 4em;
+      color: #f2f0e7;
+      flex: 1;
+      padding-left: 10px;
+    }
 
-  @keyframes background {
-    0% { background-position: 0 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0 50%; }
+    button {
+      color: white;
+      text-align: center;
+      font-family: $text-font, serif;
+      font-size: 14px;
+      //padding-right: 10px;
+      //flex: 1;
+      background-color: transparent;
+      border-style: none;
+      width: 8em;
+      transition: all ease 0.4s;
+
+      &:hover {
+        //background-color: rgba(0, 0, 0, 0.25);
+        //transition: all 1s ease-in;
+        box-shadow: inset -100px 0 0 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    @keyframes background {
+      0% { background-position: 0 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0 50%; }
+    }
   }
 }
 

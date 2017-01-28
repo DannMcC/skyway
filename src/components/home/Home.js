@@ -4,6 +4,10 @@ class Home extends Component {
 
   render () {
     return <div className='landing'>
+      <div className='home-content'>
+        <h1>NEEHEHHEHE</h1>
+        <p>ayy yoo homie</p>
+      </div>
       {/* <container className='help'>
         <section className='help-text'>
           <p>I want to</p>

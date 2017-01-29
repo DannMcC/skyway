@@ -11,9 +11,9 @@ html {
 
 body {
   @include font-smoothing(on);
-  margin: 0;
+  //margin: 0;
   font: $base-text-size / 1 $base-font-family;
-  height: 100%;
+  height: 120vh;
   justify-content: space-around;
   background: linear-gradient(235deg, #1d81ce, #028246, #27b845, #fda241, #f1614d, #1d81ce);
   //background: linear-gradient(250deg, #4bf05a, #0050ff, #93008c, #ff4e77, #ff6f2f, #ff204d);

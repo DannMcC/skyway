@@ -1,3 +1,5 @@
 .projects {
-  background-color: white;
+  background-color: $off-white;
 }
+
+@import '../components/projects/ProjectItem';

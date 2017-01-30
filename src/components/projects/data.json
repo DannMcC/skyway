@@ -1,14 +1,16 @@
 {
-  "Projects":[
+  "projects": [
     {
+      "id": "12345",
       "name": "PROJECT",
       "description": "WE GUN MAKE A MOOOVIE",
       "need": "LITERALLY EVERYTHING"
     },
     {
+      "id": "ABCDE",
       "name": "'PROJECT2'",
       "description": "WE GUN START A BAND",
       "need": "LITERALLY EVERONE"
     }
   ]
-}  
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class ProjectItem extends Component {
 
@@ -6,18 +7,20 @@ class ProjectItem extends Component {
     // name: 'PROJECT',
     // description: 'WE GUN MAKE A MOOOVIE',
     // need: 'LITERALLY EVERYTHING'
-
+    id: React.PropTypes.string.isRequired,
     name: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     need: React.PropTypes.number.isRequired
   }
 
   render () {
-    return <tr>
-      <th className='p_name'>{this.props.name}</th>
-      <td className='p_des'>{this.props.description}</td>
-      <td className='p_need'>${this.props.need}</td>
-    </tr>
+    return <div className='projectItem'>
+      <td>
+        <th className='p_name'><Link to={`/projects/${this.props.id}`}>{this.props.name}</Link></th>
+        <tr className='p_desc'>{this.props.description}</tr>
+        <tr className='p_need'>{this.props.need}</tr>
+      </td>
+    </div>
   }
 }
 

@@ -1,5 +1,22 @@
 .projects {
   background-color: $off-white;
+
+  h1 {
+    font-family: $text-font;
+  }
+
+  .projectList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    li {
+      width: 400px;
+      padding: 20px;
+    }
+  }
 }
 
 @import '../components/projects/ProjectItem';

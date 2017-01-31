@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": "12345",
-      "name": "PROJECT",
-      "description": "WE GUN MAKE A MOOOVIE",
+      "name": "Project",
+      "description": "We want to make an action movie",
       "need": "LITERALLY EVERYTHING"
     },
     {

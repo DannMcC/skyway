@@ -1,11 +1,23 @@
 .projectItem {
   border-style: solid;
+  border-width: 2px;
+  font-family: $text-font;
 
   th {
-    border-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: $text-color;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: $text-color;
+      //font-family: $text-font;
+    }
   }
 
-  td {
-    border-top-style: solid;
+  tr {
+    font-family: 'Roboto', sans-serif;
+    //border-top-style: solid;
   }
 }

@@ -15,11 +15,15 @@ class ProjectItem extends Component {
 
   render () {
     return <div className='projectItem'>
-      <td>
-        <th className='p_name'><Link to={`/projects/${this.props.id}`}>{this.props.name}</Link></th>
-        <tr className='p_desc'>{this.props.description}</tr>
-        <tr className='p_need'>{this.props.need}</tr>
-      </td>
+      <table>
+        <tbody>
+          <td>
+            <th className='p_name'><Link to={`/projects/${this.props.id}`}>{this.props.name}</Link></th>
+            <tr className='p_desc'>{this.props.description}</tr>
+            <tr className='p_need'>{this.props.need}</tr>
+          </td>
+        </tbody>
+      </table>
     </div>
   }
 }

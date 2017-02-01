@@ -2,15 +2,39 @@
   "projects": [
     {
       "id": "12345",
-      "name": "Project",
+      "user": "Joe",
+      "type":"Film",
+      "title": "Project",
+      "goal":"We are trying to make a short film about the dread of living in the suburbs. ",
       "description": "We want to make an action movie",
       "need": "LITERALLY EVERYTHING"
     },
     {
       "id": "ABCDE",
-      "name": "'PROJECT2'",
+      "user": "Ozymandias",
+      "type":"Magazine",
+      "title": "'PROJECT2'",
+      "goal":"I want to create a zine that showcases local and culture",
       "description": "WE GUN START A BAND",
-      "need": "LITERALLY EVERONE"
+      "need": "designer/ design software/ photographer/ artist's/writers/editors"
+    },
+    {
+      "id": "12345",
+      "user": "Harry",
+      "type":"Calender",
+      "title": "Project",
+      "goal":"I want to make a calender with cute doggos dressed up like people ",
+      "description": "We want to make an action movie",
+      "need": "photographer/ designer/ design software"
+    },
+    {
+      "id": "ABCDE",
+      "user": "The Big D",
+      "type":"A Music Festival",
+      "title": "'PROJECT2'",
+      "goal":"I want to start a music festival that showcases local and culture",
+      "description": "WE GUN START A BAND",
+      "need": "Connections with local venues/ band/ volunteers"
     }
   ]
 }

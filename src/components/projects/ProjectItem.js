@@ -8,22 +8,21 @@ class ProjectItem extends Component {
     // description: 'WE GUN MAKE A MOOOVIE',
     // need: 'LITERALLY EVERYTHING'
     id: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
+    user: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired,
+    goal: React.PropTypes.string.isRequired,
+    type: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
-    need: React.PropTypes.number.isRequired
+    need: React.PropTypes.string.isRequired
   }
 
   render () {
     return <div className='projectItem'>
-      <table>
-        <tbody>
-          <td>
-            <th className='p_name'><Link to={`/projects/${this.props.id}`}>{this.props.name}</Link></th>
-            <tr className='p_desc'>{this.props.description}</tr>
-            <tr className='p_need'>{this.props.need}</tr>
-          </td>
-        </tbody>
-      </table>
+      <ul>
+        <li className='title'><Link to={`/projects/${this.props.id}`}>{this.props.user} is creating a {this.props.type}</Link></li>
+        <li className='p_desc'>{this.props.goal}</li>
+        <li className='p_need'>{this.props.need}</li>
+      </ul>
     </div>
   }
 }

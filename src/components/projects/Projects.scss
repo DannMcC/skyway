@@ -1,5 +1,7 @@
 .projects {
-  background-color: $off-white;
+  background-color: transparentize($off-white, 0.33);
+  animation-name: $animate-in;
+  animation-duration: $animate-time;
 
   h1 {
     font-family: $text-font;
@@ -11,10 +13,17 @@
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
+    padding: 0 15px;
 
-    li {
-      width: 400px;
-      padding: 20px;
+    > li {
+      width: calc(50% - 40px);
+      padding: 20px 0;
+    }
+
+    @media (max-width: 640px) {
+      > li {
+        width: auto;
+      }
     }
   }
 }

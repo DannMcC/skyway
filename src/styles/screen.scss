@@ -3,6 +3,8 @@ $header-font: 'VT323', monospace;
 $text-font: 'Roboto Mono', monospace;
 $off-white: #f9f9f9;
 $text-color: #252525;
+$animate-in: fade-in;
+$animate-time: 0.5s;
 
 $base-text-size: 16px;
 $base-font-family: sans-serif;
@@ -23,7 +25,34 @@ body {
   animation: background 60s ease infinite;
 }
 
+.comp-top {
+  display: flex;
+
+  .comp-head {
+    flex: 1;
+  }
+
+  .comp-exit {
+    padding-right: 5px;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}
+
+@keyframes fade-in {
+
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @import '../components/home/Home';
 @import '../components/layout/Layout';
 @import '../components/projects/Projects';
+@import '../components/about/About';
+@import '../components/people/People';
+
 //@import '../components/projects/ProjectItem';

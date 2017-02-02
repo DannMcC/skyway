@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SessionButton from '../SessionButton'
 
 class Layout extends Component {
 
@@ -11,7 +12,7 @@ class Layout extends Component {
     return <div className='layout'>
       <header>
         <h1>Skyway </h1>
-        <button> SIGN IN</button>
+        <SessionButton />
       </header>
       <main>
         {this.props.children}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-
+import withAuth from '../utils/withAuth'
 import Layout from './layout/Layout'
 import People from './people/People'
 import About from './about/About'
@@ -9,7 +9,14 @@ import Projects from './projects/Projects'
 import ProjectSection from './projects/ProjectSection'
 import Submit from './submit/Submit'
 
+@withAuth
 class App extends Component {
+
+  requireAuth = (nextState, replace) => {
+    if (!this.props.auth.isSignedIn) {
+      replace({ pathname: '/' })
+    }
+  }
 
   render () {
     return <Router history={browserHistory}>

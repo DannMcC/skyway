@@ -1,4 +1,30 @@
 {
+  "users" : [
+    {
+      "user": "Joe",
+      "skills" : "Amautur Photography",
+      "gear" : "DSLR camera / Adobe CC /",
+      "img" : "http://weknowyourdreams.com/images/duck/duck-08.jpg"
+    },
+    {
+      "user": "Joe",
+      "skills" : "Amautur Photography",
+      "gear" : "DSLR camera / Adobe CC /",
+      "img" : "http://weknowyourdreams.com/images/duck/duck-08.jpg"
+    },
+    {
+      "user": "Joe",
+      "skills" : "Amautur Photography",
+      "gear" : "DSLR camera / Adobe CC /",
+      "img" : "http://weknowyourdreams.com/images/duck/duck-08.jpg"
+    },
+    {
+      "user": "Joe",
+      "skills" : "Amautur Photography",
+      "gear" : "DSLR camera / Adobe CC /",
+      "img" : "http://weknowyourdreams.com/images/duck/duck-08.jpg"
+    }
+  ],
   "projects": [
     {
       "id": "12345",

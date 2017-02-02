@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import ProjectItem from './ProjectItem'
-import data from './data.json'
+import data from '../data.json'
 
 class Projects extends Component {
 

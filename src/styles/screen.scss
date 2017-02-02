@@ -1,10 +1,12 @@
 @import 'utility';
 $header-font: 'VT323', monospace;
-$text-font: 'Roboto Mono', monospace;
+$text-font: 'Rubik', sans-serif;
+//$text-font: 'Roboto Mono', monospace;
 $off-white: #f9f9f9;
 $text-color: #252525;
 $animate-in: fade-in;
 $animate-time: 0.5s;
+$new-font: 'Rubik', sans-serif;
 
 $base-text-size: 16px;
 $base-font-family: sans-serif;
@@ -54,5 +56,7 @@ body {
 @import '../components/projects/Projects';
 @import '../components/about/About';
 @import '../components/people/People';
+@import '../components/submit/Submit';
+
 
 //@import '../components/projects/ProjectItem';

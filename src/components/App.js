@@ -7,6 +7,7 @@ import About from './about/About'
 import Home from './home/Home'
 import Projects from './projects/Projects'
 import ProjectSection from './projects/ProjectSection'
+import Submit from './submit/Submit'
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
         <IndexRoute component={Home} />
         <Route path='people' component={People} />
         <Route path='about' component={About} />
+        <Route path='Submit' component={Submit} />
         <Route path='projects' component={Projects} />
         <Route path='projects/:id' component={ProjectSection} />
       </Route>

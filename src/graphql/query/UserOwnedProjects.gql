@@ -1,0 +1,9 @@
+query UserOwnedProjects {
+  user {
+    id
+    ownedProjects {
+      id
+      name
+    }
+  }
+}

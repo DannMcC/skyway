@@ -3,4 +3,4 @@ export const AUTH0 = {
   CLIENT_DOMAIN: 'dannmcc.auth0.com'
 }
 
-export const GRAPHQL_ENDPOINT = ''
+export const GRAPHQL_ENDPOINT = 'https://api.graph.cool/simple/v1/ciyoxn6th43ew0132xnwerh0a'

@@ -38,20 +38,21 @@ class Client {
         }).then(({ data }) => {
           // If this user hasn't signed in before, store them in Graphcool:
           if (!data.user) {
-            client.mutate({
+            this.apollo.mutate({
               mutation: gql`
-                mutation ($token: String!, $name: String!, $email: String!, $image: String!){
-                  createUser(authProvider: { auth0: { idToken: $token } }, name: $name, email: $email) {
+                mutation ($token: String!, $name: String!, $email: String, $image: String!){
+                  createUser(authProvider: { auth0: { idToken: $token } }, name: $name, email: $email, image: $image) {
                     id
                 } }
               `,
               variables: {
                 token: auth.token,
                 name: auth.profile.name,
-                email: auth.profile.email
+                email: auth.profile.email,
+                image: auth.profile.picture
               }
             }).then(({ data }) => {
-              this.userId = data.user.id
+              this.userId = data.id
             })
           } else {
             this.userId = data.user.id

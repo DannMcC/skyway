@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import { Link, browserHistory } from 'react-router'
 import { graphql } from 'react-apollo'
 import withAuth from '../../utils/withAuth'
-import CreateProject from '../../graphql/mutation/CreateProject.gql'
-import update from 'immutability-helper'
+import {
+  mutationCreateProject,
+  queryUserOwnedProjects
+} from '../../graphql'
 
 @withAuth
-@graphql(CreateProject, {name: 'createProject'})
+@graphql(...mutationCreateProject())
 class Submit extends Component {
 
   state = {
@@ -19,19 +21,17 @@ class Submit extends Component {
 
   _newProject = (event) => {
     event.preventDefault()
-    this.props.createProject({
+    this.props.mutationCreateProject({
       variables: {
         ownerId: this.props.client.userId,
         name: this.state.n_title
       },
-      updateQueries: {
-        UserOwnedProjects: (prev, {mutationResult}) => {
-          const project = mutationResult.data.createProject
-          return update(prev, {user: {ownedProjects: {$push: [project]}}})
-        }
-      }
+      refetchQueries: [{
+        query: queryUserOwnedProjects(false)
+      }]
+    }).then(({data}) => {
+      browserHistory.push(`/projects/${data.createProject.id}`)
     })
-    // browserHistory.push('/projects/foo-bar')
   }
 
   handleInputChange = (event) => {

@@ -3,18 +3,18 @@ import { Link } from 'react-router'
 import ProjectItem from './ProjectItem'
 import data from '../data.json'
 import { graphql } from 'react-apollo'
-import UserOwnedProjects from '../../graphql/query/UserOwnedProjects.gql'
+import {queryUserOwnedProjects} from '../../graphql'
 // import withAuth from '../../utils/withAuth'
 
 // @withAuth
-@graphql(UserOwnedProjects, {name: 'userOwnedProjects'})
+@graphql(...queryUserOwnedProjects())
 class Projects extends Component {
 
   projects () {
-    if (this.props.userOwnedProjects.loading) {
+    if (this.props.queryUserOwnedProjects.loading) {
       return <li>Loading...</li>
     }
-    return this.props.userOwnedProjects.user.ownedProjects.map((project, i) => {
+    return this.props.queryUserOwnedProjects.user.ownedProjects.map((project, i) => {
       return <li key={i}>{project.name}</li>
     })
 

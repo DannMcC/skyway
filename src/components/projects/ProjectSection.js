@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import data from '../data.json'
+// import data from '../data.json'
 
 class ProjectSection extends Component {
 
@@ -8,10 +8,10 @@ class ProjectSection extends Component {
   }
 
   render () {
-    const project = data.projects.find(p => p.id === this.props.params.id)
+    // const project = data.projects.find(p => p.id === this.props.params.id)
 
     return <section>
-      <h2>{project.name}</h2>
+      <h2>Foo</h2>
     </section>
   }
 }

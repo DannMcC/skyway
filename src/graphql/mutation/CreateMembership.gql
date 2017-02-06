@@ -1,0 +1,12 @@
+mutation CreateMembership($userId: ID!, $projectId: ID!) {
+  addToMemberships(usersUserId: $userId, projectsProjectId: $projectId) {
+    usersUser {
+      id
+      name
+      image
+    }
+    projectsProject {
+      name
+    }
+  }
+}

@@ -4,6 +4,12 @@ query UserOwnedProjects {
     ownedProjects {
       id
       name
+      users {
+        id
+        image
+        email
+        name
+      }
     }
   }
 }

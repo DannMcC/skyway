@@ -15,7 +15,31 @@ class Projects extends Component {
       return <li>Loading...</li>
     }
     return this.props.queryUserOwnedProjects.user.ownedProjects.map((project, i) => {
-      return <li key={i}>{project.name}</li>
+      console.log(project.memberships)
+      return <div className='projectItem' key={i}>
+        <ul>
+          <ul>
+            <li className='title'><Link to={`/projects/${this.props.id}`}>{project.owner} is creating a {project.type}</Link></li>
+            <li className='p_desc'>{project.need}</li>
+            <li className='p_need'>{project.goal}</li>
+          </ul>
+          <li className='title'>PROJECT OWNER is making a PROJECT TYPE</li>
+          <li>{project.name}</li>
+          <li>members</li>
+        </ul>
+        <table>
+          <tbody>
+            {project.users.map((user, i) => {
+              return <tr key={i}>
+                <td><img src={user.image} /></td>
+                {/* <td>{user.name}</td>
+                <td>{user.email}</td> */}
+              </tr>
+            })}
+          </tbody>
+        </table>
+        <button>Add Member</button>
+      </div>
     })
 
     // return data.projects.map((project, i) => {

@@ -24,7 +24,11 @@ class Submit extends Component {
     this.props.mutationCreateProject({
       variables: {
         ownerId: this.props.client.userId,
-        name: this.state.n_title
+        name: this.state.n_title,
+        type: this.state.n_type,
+        goal: this.state.n_goal,
+        need: this.state.n_need,
+        description: this.state.n_description
       },
       refetchQueries: [{
         query: queryUserOwnedProjects(false)

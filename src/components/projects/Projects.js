@@ -1,30 +1,35 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import ProjectItem from './ProjectItem'
-import data from '../data.json'
+// import ProjectItem from './ProjectItem'
+// import data from '../data.json'
 import { graphql } from 'react-apollo'
-import {queryUserOwnedProjects} from '../../graphql'
+import { queryAllProjects } from '../../graphql'
+import ui from '../../ui'
 // import withAuth from '../../utils/withAuth'
 
 // @withAuth
-@graphql(...queryUserOwnedProjects())
+@graphql(...queryAllProjects())
 class Projects extends Component {
 
+  potato () {
+    ui.displayModal('foo')
+  }
+
   projects () {
-    if (this.props.queryUserOwnedProjects.loading) {
+    if (this.props.queryAllProjects.loading) {
       return <li>Loading...</li>
     }
-    return this.props.queryUserOwnedProjects.user.ownedProjects.map((project, i) => {
-      console.log(project.memberships)
+    return this.props.queryAllProjects.allProjects.map((project, i) => {
       return <div className='projectItem' key={i}>
         <ul>
           <ul>
-            <li className='title'><Link to={`/projects/${this.props.id}`}>{project.owner} is creating a {project.type}</Link></li>
+            <li className='title'><Link to={`/projects/${this.props.id}`}>{project.owner.name} is creating a {project.type}</Link></li>
             <li className='p_desc'>{project.need}</li>
             <li className='p_need'>{project.goal}</li>
           </ul>
-          <li className='title'>PROJECT OWNER is making a PROJECT TYPE</li>
+          {/* <li className='title'>PROJECT OWNER is making a PROJECT TYPE</li>
           <li>{project.name}</li>
+          <li>{project.need}</li> */}
           <li>members</li>
         </ul>
         <table>
@@ -38,7 +43,7 @@ class Projects extends Component {
             })}
           </tbody>
         </table>
-        <button>Add Member</button>
+        <button onClick={this.potato}>Add Member</button>
       </div>
     })
 

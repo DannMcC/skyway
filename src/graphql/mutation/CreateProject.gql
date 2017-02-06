@@ -1,6 +1,10 @@
-mutation CreateProject($ownerId: ID!, $name: String!) {
-  createProject(ownerId: $ownerId, name: $name) {
+mutation CreateProject($ownerId: ID!, $name: String!, $type: String!, $goal: String!, $need: String!, $description: String!) {
+  createProject(ownerId: $ownerId, name: $name, type: $type, goal: $goal, need: $need description: $description) {
     id
     name
+    type
+    goal
+    need
+    description
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SessionButton from '../SessionButton'
+import Modal from '../modal/Modal'
 
 class Layout extends Component {
 
@@ -17,6 +18,7 @@ class Layout extends Component {
       <main>
         {this.props.children}
       </main>
+      <Modal />
     </div>
   }
 }

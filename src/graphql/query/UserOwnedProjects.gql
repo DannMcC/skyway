@@ -4,6 +4,10 @@ query UserOwnedProjects {
     ownedProjects {
       id
       name
+      type
+      goal
+      need
+      description
       users {
         id
         image

@@ -1,7 +1,0 @@
-mutation CreateProfile( $assets: String!, $aboutuser: String!, $projecttypes: String!) {
-  createUser (assets: $assets, aboutuser: $aboutuser, projecttypes: $projecttypes) {
-    assets
-    aboutuser
-    projecttypes
-  }
-}

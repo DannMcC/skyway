@@ -1,9 +1,9 @@
-query AllPeople {
-  allUsers {
-    name
+query CurrentUser {
+  user {
     id
-    image
+    name
     email
+    image
     assets
     aboutuser
     projecttypes

@@ -15,6 +15,7 @@
     font-family: $text-font;
     background-color: $off-white;
     box-shadow: -5px 5px 0 transparentize($text-color, 0.33);
+    width: 500px;
 
     > ul {
       list-style: none;
@@ -23,10 +24,19 @@
       .name {
         border-bottom-style: solid;
         border-width: thin;
-        justify-content: center;
         border-color: $text-color;
-        // width: calc(100% - 20px);
+        padding: 2px;
+        width: calc(100% + 30px);
         font-weight: bold;
+        display: flex;
+        text-align: center;
+
+        h2 {
+          font-size: 1.5em;
+          line-height: 200%;
+          padding-left: 1em;
+          margin: 0;
+        }
       }
     }
 
@@ -36,7 +46,12 @@
 
     li {
       font-family: $text-font, sans-serif;
-      padding: 20px;
+      padding: 5px;
+      display: flex;
+
+      p {
+        margin: 0;
+      }
       //border-top-style: solid;
     }
   }

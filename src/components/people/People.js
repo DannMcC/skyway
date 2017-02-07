@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import PeopleItem from './PeopleItem'
-import data from '../data.json'
 import { graphql } from 'react-apollo'
 import { queryAllPeople } from '../../graphql'
 

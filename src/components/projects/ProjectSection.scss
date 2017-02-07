@@ -36,13 +36,21 @@
   }
 
   button {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    color: $text-color;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-family: $text-font, serif;
+    font-size: 14px;
+    //padding-right: 10px;
+    //flex: 1;
+    background-color: transparent;
+    border-style: none;
+    width: 8em;
+    transition: all ease 0.4s;
+
+    &:hover {
+      //background-color: rgba(0, 0, 0, 0.25);
+      //transition: all 1s ease-in;
+      box-shadow: inset -100px 0 0 0 rgba(0, 0, 0, 0.25);
+    }
   }
 }

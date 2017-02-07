@@ -1,35 +1,35 @@
 import React, { Component } from 'react'
 import ui from '../../ui'
-import { queryCurrentProject } from '../../graphql'
+import { mutationCreateMembership, queryAllProjects } from '../../graphql'
 import { graphql } from 'react-apollo'
+import withAuth from '../../utils/withAuth'
 
 // import data from '../data.json'
-@graphql(...queryCurrentProject())
+@graphql(...mutationCreateMembership())
+@withAuth
 class ProjectSection extends Component {
-  project () {
-    if (this.props.queryCurrentProject.loading) {
-      return <li>Loading...</li>
-    }
-    return this.props.queryCurrentProject.CurrentProject.map((project, i) => {
-      return <ProjectSection {...project} key={i} />
-    })
-  }
 
   _submit = () => {
-    // DO THE MUTIATION THEN:
-    ui.displayModal()
+    this.props.mutationCreateMembership({
+      variables: {
+        userId: this.props.client.userId,
+        projectId: this.props.id
+      },
+      refetchQueries: [{ query: queryAllProjects(false) }]
+    }).then(() => {
+      ui.dismissModal()
+    })
   }
 
   render () {
     const { id, need, goal, users, owner, type } = this.props
     // const project = data.projects.find(p => p.id === this.props.params.id)
     return <div>
-      <input type='text' />
-      <p>{id}</p>
       <p>{need}</p>
       <p>{type}</p>
-      <p>{owner}</p>
+      <p>{owner.name}</p>
       {/* {this.project()} */}
+      <button onClick={this._submit}>JOIN</button>
     </div>
   }
 }

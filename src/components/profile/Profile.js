@@ -3,12 +3,13 @@ import { Link, browserHistory } from 'react-router'
 import { graphql } from 'react-apollo'
 import withAuth from '../../utils/withAuth'
 import {
-  mutationCreateProfile,
-  queryUserOwnedProjects
+  mutationUpdateProfile,
+  queryCurrentUser
 } from '../../graphql'
 
 @withAuth
-@graphql(...mutationCreateProfile())
+@graphql(...queryCurrentUser())
+@graphql(...mutationUpdateProfile())
 class Profile extends Component {
 
   state = {
@@ -19,18 +20,15 @@ class Profile extends Component {
 
   _newProfile = (event) => {
     event.preventDefault()
-    this.props.mutationCreateProfile({
+    this.props.mutationUpdateProfile({
       variables: {
-        ownerId: this.props.client.userId,
+        userId: this.props.client.userId,
         assets: this.state.assets,
         aboutuser: this.state.aboutuser,
         projecttypes: this.state.projecttypes
-      },
-      refetchQueries: [{
-        query: queryUserOwnedProjects(false)
-      }]
+      }
     }).then(({data}) => {
-      browserHistory.push(`/projects/${data.createProject.id}`)
+      browserHistory.push(`/start/`)
     })
   }
 
@@ -40,17 +38,27 @@ class Profile extends Component {
     })
   }
 
+  componentWillReceiveProps (props) {
+    if (!props.queryCurrentUser.loading) {
+      this.setState({
+        assets: props.queryCurrentUser.user.assets,
+        aboutuser: props.queryCurrentUser.user.aboutuser,
+        projecttypes: props.queryCurrentUser.user.projecttypes
+      })
+    }
+  }
+
   render () {
     return <div className='profile' >
       <div className='comp-top'>
         <h1 className='comp-head'>Create a Profile</h1>
         <h1 className='comp-exit'><Link to='/projects'>X</Link></h1>
       </div>
-      <ul className='submitForm'>
+      <ul className='profileForm'>
         <form onSubmit={this._newProfile}>
           <li className='assets'>
             What sort of what sort of assets (software, equipment skills) do you have access to?
-            <textarea type='text' maxLength='30' value={this.state.assets} name='assets' onChange={this.handleInputChange} />
+            <textarea type='text' value={this.state.assets} name='assets' onChange={this.handleInputChange} />
           </li>
           <li className='projecttypes'>
             What sort of projects are you interested in working on?

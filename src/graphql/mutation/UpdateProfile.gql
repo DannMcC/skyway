@@ -1,0 +1,8 @@
+mutation UpdateProfile( $userId: ID!, $assets: String!, $aboutuser: String!, $projecttypes: String!) {
+  updateUser (id: $userId, assets: $assets, aboutuser: $aboutuser, projecttypes: $projecttypes) {
+    id
+    assets
+    aboutuser
+    projecttypes
+  }
+}

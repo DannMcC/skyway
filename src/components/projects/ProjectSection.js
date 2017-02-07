@@ -8,15 +8,15 @@ import AddMember from './AddMember'
 class ProjectSection extends Component {
 
   potato = () => {
-    ui.displayModal(<AddMember id={this.props.id} />)
+    ui.displayModal(<AddMember {...this.props} />)
   }
 
   render () {
     // const project = data.projects.find(p => p.id === this.props.params.id)
-    const { id, need, goal, users, owner, type } = this.props
+    const { need, goal, users, owner, type } = this.props
     return <div className='projectItem'>
       <ul>
-        <li className='title'><Link to={`/projects/${id}`}>{owner.name} is creating a {type}</Link></li>
+        <li className='title'><a onClick={this.potato}>{owner.name} is creating a {type}</a></li>
         <li className='p_desc'>{need}</li>
         <li className='p_need'>{goal}</li>
 

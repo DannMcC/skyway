@@ -8,6 +8,8 @@ import Home from './home/Home'
 import Projects from './projects/Projects'
 import ProjectSection from './projects/ProjectSection'
 import Submit from './submit/Submit'
+import Start from './start/Start'
+import Profile from './profile/Profile'
 import { ApolloProvider } from 'react-apollo'
 
 @withAuth
@@ -25,8 +27,10 @@ class App extends Component {
         <Route path='/' component={Layout}>
           <IndexRoute component={Home} />
           <Route path='people' component={People} />
+          <Route path='start' component={Start} />
           <Route path='about' component={About} />
           <Route path='Submit' component={Submit} />
+          <Route path='Profile' component={Profile} />
           <Route path='projects' component={Projects} />
           <Route path='projects/:id' component={ProjectSection} />
         </Route>

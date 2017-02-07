@@ -1,0 +1,27 @@
+.start {
+  .comp-top {
+    display: flex;
+    background-color: $off-white;
+    font-family: $text-font;
+    color: $text-color;
+  }
+
+  h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: solid;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    background-color: $off-white;
+    font-family: $text-font;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: $text-color;
+      //color: $off-white;
+      display: block;
+      line-height: 1em;
+    }
+  }
+}

@@ -10,7 +10,7 @@
   align-items: center;
 
   .card {
-    background-color: blue;
+    background-color: $off-white;
     box-shadow: 0 0 10em transparentize(black, 0.33);
     min-width: 200px;
   }
@@ -25,12 +25,12 @@
       background-color: transparent;
       padding: 0;
       border: none;
-      color: purple;
+      //color: purple;
 
       &:focus,
       &:hover {
         outline: none;
-        color: red;
+        color: $text-color;
       }
 
       &:active {

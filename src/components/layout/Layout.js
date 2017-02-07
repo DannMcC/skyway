@@ -12,7 +12,7 @@ class Layout extends Component {
   render () {
     return <div className='layout'>
       <header>
-        <h1>Skyway </h1>
+        <h1>Arrendt</h1>
         <SessionButton />
       </header>
       <main>

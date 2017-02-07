@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 
 class PeopleItem extends Component {
 
@@ -17,11 +16,12 @@ class PeopleItem extends Component {
   }
 
   render () {
-    return <div className='projectItem'>
+    const { name, id, image, email, assets } = this.props
+    return <div className='peopleItem'>
       <ul>
-        <li className='title'><Link to={`/people/${this.props.user}`}>{this.props.user}</Link></li>
-        <li className='p_desc'>{this.props.skills}</li>
-        <li className='p_need'>{this.props.gear}</li>
+        <li className='name'><img src={image} />{name}</li>
+        <li className='p_desc'>{email}</li>
+        <li className='p_need'>{assets}</li>
       </ul>
     </div>
   }

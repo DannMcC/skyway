@@ -1,0 +1,9 @@
+query AllPeople {
+  allUsers {
+    name
+    id
+    image
+    email
+    assets
+  }
+}

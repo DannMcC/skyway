@@ -15,9 +15,13 @@
       //font: 32pt, 'OnedayFF';
       //font-family: $header-font, serif;
       margin-top: 5px;
-      font-family: 'OnedayFF', serif;
+      font-family: $new-font;
+      //font-family: 'OnedayFF', serif;
+      font-weight: 700;
+      font-style: italic;
+      letter-spacing: -5px;
       font-size: 4em;
-      color: #f2f0e7;
+      color: $off-white;
       flex: 1;
       padding-left: 10px;
     }

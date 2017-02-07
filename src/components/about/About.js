@@ -9,6 +9,11 @@ class About extends Component {
         <h1 className='comp-head'>About</h1>
         <h1 className='comp-exit'><Link to='/'>X</Link></h1>
       </div>
+      <div className='about'>
+        <h1>Arrendt</h1>
+        <h2>/'arənt/</h2>
+        <p className='quote'>"Thought and action must never part company" -Hannah Arendt</p>
+      </div>
     </div>
   }
 }

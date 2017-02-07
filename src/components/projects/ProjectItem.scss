@@ -3,14 +3,10 @@
   border-color: transparentize($text-color, 0.33);
   border-width: 2px;
   font-family: $text-font;
+  background-color: $off-white;
+  box-shadow: -5px 5px 0 transparentize($text-color, 0.33);
 
   > ul {
-    background-color: $off-white;
-    // border-bottom-style: solid;
-    // border-left-style: solid;
-    // border-width: thick;
-    // border-color: $text-color;
-    box-shadow: -5px 5px 0 transparentize($text-color, 0.33);
     list-style: none;
     padding-left: 0;
 
@@ -26,8 +22,11 @@
     a:visited {
       text-decoration: none;
       color: $text-color;
-      //font-family: $text-font;
     }
+  }
+
+  img {
+    border-radius: 50px;
   }
 
   li {

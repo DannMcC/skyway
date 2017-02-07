@@ -1,0 +1,16 @@
+query CurrentProject {
+  Project {
+    id
+    type
+    need
+    goal
+    owner {
+      name
+      id
+    }
+    users {
+      id
+      image
+    }
+  }
+}

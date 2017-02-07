@@ -19,17 +19,17 @@
         border-width: 2px;
         border-top: none;
         font-family: $new-font;
-        font-size: 36px;
+        font-size: 45px;
         font-weight: 700;
         text-align: center;
-        height: 10vh;
+        height: 1em;
 
         a:link,
         a:visited {
           text-decoration: none;
           color: $off-white;
           display: block;
-          line-height: 10vh;
+          line-height: 1em;
         }
       }
     }

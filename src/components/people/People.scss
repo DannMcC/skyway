@@ -5,5 +5,39 @@
 
   h1 {
     font-family: $text-font;
+    font-weight: 900;
+  }
+
+  .peopleItem {
+    border-style: solid;
+    border-color: transparentize($text-color, 0.33);
+    border-width: 2px;
+    font-family: $text-font;
+    background-color: $off-white;
+    box-shadow: -5px 5px 0 transparentize($text-color, 0.33);
+
+    > ul {
+      list-style: none;
+      padding-left: 0;
+
+      .name {
+        border-bottom-style: solid;
+        border-width: thin;
+        justify-content: center;
+        border-color: $text-color;
+        // width: calc(100% - 20px);
+        font-weight: bold;
+      }
+    }
+
+    img {
+      border-radius: 50px;
+    }
+
+    li {
+      font-family: $text-font, sans-serif;
+      padding: 20px;
+      //border-top-style: solid;
+    }
   }
 }

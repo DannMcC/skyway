@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import ProjectSection from './ProjectSection'
-import ProjectItem from './ProjectItem'
+// import ProjectItem from './ProjectItem'
 // import data from '../data.json'
 import { graphql } from 'react-apollo'
-import { queryAllProjects } from '../../graphql'
+import { queryAllProjects, queryUserOwnedProjects } from '../../graphql'
 // import withAuth from '../../utils/withAuth'
 
 // @withAuth
 @graphql(...queryAllProjects())
+@graphql(...queryUserOwnedProjects())
 class Projects extends Component {
 
   projects () {

@@ -9,7 +9,9 @@ class Auth {
 
   constructor () {
     const options = {
-      // TODO: Customize Auth0 Widget
+      theme: {
+        logo: '../images/ArrendtLogo.png'
+      },
       auth: {
         redirectUrl: `${window.location.protocol}//${window.location.host}/`,
         responseType: 'token'

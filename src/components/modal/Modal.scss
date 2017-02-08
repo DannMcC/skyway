@@ -19,18 +19,21 @@
     text-align: right;
     padding: 0.5em;
 
-    button {
+    > button {
+      flex: 1;
+      text-align: right;
+      padding-right: 10px;
+      color: $text-color;
       font-size: 2rem;
       line-height: 0;
       background-color: transparent;
-      padding: 0;
       border: none;
       //color: purple;
 
-      &:focus,
+      > &:focus,
       &:hover {
         outline: none;
-        color: $text-color;
+        color: black;
       }
 
       &:active {

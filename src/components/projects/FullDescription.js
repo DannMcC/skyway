@@ -7,7 +7,7 @@ import withAuth from '../../utils/withAuth'
 // import data from '../data.json'
 @graphql(...mutationCreateMembership())
 @withAuth
-class ProjectSection extends Component {
+class FullDescription extends Component {
 
   _submit = () => {
     this.props.mutationCreateMembership({
@@ -22,16 +22,18 @@ class ProjectSection extends Component {
   }
 
   render () {
-    const { id, need, goal, users, owner, type } = this.props
+    const { id, need, goal, users, owner, type, description } = this.props
     // const project = data.projects.find(p => p.id === this.props.params.id)
     return <div>
       <p>{need}</p>
       <p>{type}</p>
       <p>{owner.name}</p>
+      <p>{goal}</p>
+      <p>{description}</p>
       {/* {this.project()} */}
       <button onClick={this._submit}>JOIN</button>
     </div>
   }
 }
 
-export default ProjectSection
+export default FullDescription

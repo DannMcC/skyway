@@ -7,10 +7,10 @@ class PeopleItem extends Component {
     return <div className='peopleItem'>
       <ul>
         <li className='name'><img src={image} /><h2>{name}</h2></li>
-        <li className='p_desc'><p>Email: </p> {email}</li>
-        <li className='p_need'><p>Assets: </p>{assets}</li>
-        <li className='p_desc'><p />{aboutuser}</li>
-        <li className='p_desc'><p>Interest: </p> {projecttypes}</li>
+        <li className='p_desc'><p>Email:</p>&nbsp; {email}</li>
+        <li className='p_need'><p>Assets: </p>&nbsp; {assets}</li>
+        <li className='p_desc'><p>About: </p>&nbsp; {aboutuser}</li>
+        <li className='p_desc'><p>Interest: </p>&nbsp; {projecttypes}</li>
       </ul>
     </div>
   }

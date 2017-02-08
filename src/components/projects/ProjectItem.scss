@@ -5,6 +5,18 @@
   font-family: $text-font;
   background-color: $off-white;
   box-shadow: -5px 5px 0 transparentize($text-color, 0.33);
+  width: 400px;
+
+  .members {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+
+    .images {
+      flex: 0;
+      padding: 5px;
+    }
+  }
 
   > ul {
     list-style: none;

@@ -12,7 +12,7 @@ class Modal extends Component {
       return <div className='Modal'>
         <div className='card'>
           <header>
-            <button onClick={this._dismiss}>ICON</button>
+            <button onClick={this._dismiss}>X</button>
           </header>
           <div className='content'>
             {ui.modal}

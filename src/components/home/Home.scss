@@ -35,3 +35,16 @@
     }
   }
 }
+
+@media screen and   (max-width: 400px) {
+  .landing {
+    .home-content {
+      ul {
+        li,
+        .first {
+          font-size: 10vw;
+        }
+      }
+    }
+  }
+}

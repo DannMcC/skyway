@@ -1,4 +1,7 @@
 .start {
+  width: 105vw;
+  margin-left: -10px;
+
   .comp-top {
     display: flex;
     background-color: $off-white;
@@ -15,13 +18,23 @@
     background-color: $off-white;
     font-family: $text-font;
 
+    //&&hover
+
     a:link,
     a:visited {
+      //animation: flip 60s ease;
       text-decoration: none;
       color: $text-color;
       //color: $off-white;
       display: block;
       line-height: 1em;
     }
+
   }
+}
+
+@keyframes flip {
+
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

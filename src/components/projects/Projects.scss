@@ -1,7 +1,9 @@
 .projects {
-  background-color: transparentize($off-white, 0.33);
+  background-color: $off-white;
   animation-name: $animate-in;
   animation-duration: $animate-time;
+  width: 105vw;
+  margin-left: -10px;
 
   h1 {
     font-family: $text-font;

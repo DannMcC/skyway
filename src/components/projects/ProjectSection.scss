@@ -23,20 +23,29 @@
       text-decoration: none;
       color: $text-color;
     }
-  }
 
-  img {
-    border-radius: 50px;
-    max-width: 50px;
-    max-height: 50px;
-  }
+    img {
+      border-radius: 50px;
+      max-width: 50px;
+      max-height: 50px;
+    }
 
-  li {
-    font-family: $text-font, sans-serif;
-    padding: 20px;
-    //border-top-style: solid;
-  }
+    > li {
+      font-family: $text-font, sans-serif;
+      padding: 20px;
+    }
 
+  }
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+
+  .images {
+    flex: 0;
+    }
+  }
   button {
     color: $text-color;
     text-align: center;

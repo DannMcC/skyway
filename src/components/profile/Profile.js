@@ -52,7 +52,7 @@ class Profile extends Component {
     return <div className='profile' >
       <div className='comp-top'>
         <h1 className='comp-head'>Create a Profile</h1>
-        <h1 className='comp-exit'><Link to='/projects'>X</Link></h1>
+        <h1 className='comp-exit'><Link to='/start'>X</Link></h1>
       </div>
       <ul className='profileForm'>
         <form onSubmit={this._newProfile}>

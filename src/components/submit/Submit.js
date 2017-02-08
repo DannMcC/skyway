@@ -48,7 +48,7 @@ class Submit extends Component {
     return <div className='submit' >
       <div className='comp-top'>
         <h1 className='comp-head'>Create a Project</h1>
-        <h1 className='comp-exit'><Link to='/projects'>X</Link></h1>
+        <h1 className='comp-exit'><Link to='/start'>X</Link></h1>
       </div>
       <ul className='submitForm'>
         <form onSubmit={this._newProject}>

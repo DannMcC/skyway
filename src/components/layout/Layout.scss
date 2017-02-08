@@ -11,19 +11,31 @@
     margin-top: 0;
     height: 65px;
 
-    h1 {
-      //font: 32pt, 'OnedayFF';
-      //font-family: $header-font, serif;
-      margin-top: 5px;
-      font-family: $new-font;
-      //font-family: 'OnedayFF', serif;
-      font-weight: 700;
-      font-style: italic;
-      letter-spacing: -5px;
-      font-size: 4em;
-      color: $off-white;
+    .flexpush {
       flex: 1;
-      padding-left: 10px;
+
+      h1 {
+        //font: 32pt, 'OnedayFF';
+        //font-family: $header-font, serif;
+        margin-top: 5px;
+        font-family: $new-font;
+        //font-family: 'OnedayFF', serif;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: -5px;
+        font-size: 4em;
+        color: $off-white;
+        flex: 1;
+        padding-left: 10px;
+
+        a:link,
+        a:visited {
+          text-decoration: none;
+          color: $off-white;
+          display: block;
+          line-height: 1em;
+        }
+      }
     }
 
     button {

@@ -4,6 +4,7 @@ query AllProjects {
     type
     need
     goal
+    description
     owner {
       name
       id

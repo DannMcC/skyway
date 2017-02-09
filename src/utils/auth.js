@@ -10,7 +10,7 @@ class Auth {
   constructor () {
     const options = {
       theme: {
-        logo: '../images/ArrendtLogo.png'
+        logo: 'https://raw.githubusercontent.com/DannMcC/skyway/master/src/images/ArrendtLogo.png'
       },
       auth: {
         redirectUrl: `${window.location.protocol}//${window.location.host}/`,

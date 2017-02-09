@@ -6,6 +6,10 @@
   background-color: $off-white;
   box-shadow: -5px 5px 0 transparentize($text-color, 0.33);
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+
 
   .members {
     display: flex;
@@ -21,6 +25,8 @@
   > ul {
     list-style: none;
     padding-left: 0;
+    justify-content: space-between;
+    flex: 1;
 
     .title {
       border-bottom-style: solid;
@@ -51,15 +57,16 @@
 
   button {
     color: $text-color;
-    text-align: center;
     font-family: $text-font, serif;
-    font-size: 14px;
-    //padding-right: 10px;
-    //flex: 1;
+    font-size: 1em;
+    text-align: right;
     background-color: transparent;
     border-style: none;
     width: 8em;
     transition: all ease 0.4s;
+    position: relative;
+    bottom: 5px;
+    justify-content: flex-end;
 
     &:hover {
       //background-color: rgba(0, 0, 0, 0.25);

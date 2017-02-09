@@ -2,6 +2,8 @@
   background-color: $off-white;
   animation-name: $animate-in;
   animation-duration: $animate-time;
+  width: 100vw;
+  margin-left: -8px;
 
   h1 {
     font-family: $text-font;
@@ -21,11 +23,16 @@
       font-weight: 100;
     }
 
-    p {
-      margin: 0.25em;
-      font-family: $text-font;
+    .quote {
       font-weight: 300;
       font-style: italic;
+      margin: 0.25em;
+      font-family: $text-font;
+    }
+
+    .about-text {
+      width: 90vw;
+      font-family: $text-font;
     }
   }
 }

@@ -42,7 +42,14 @@
   }
 }
 
-@font-face {
-  font-family: 'OnedayFF';
-  src: url('./OnedayFF/ONEDAY.otf') format('opentype');
+@media screen and   (max-width: 420px) {
+  .layout {
+    header {
+      .flexpush {
+        h1 {
+          font-size: 3em;
+        }
+      }
+    }
+  }
 }

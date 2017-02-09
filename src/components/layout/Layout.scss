@@ -8,9 +8,7 @@
 
     .flexpush {
       h1 {
-        //font: 32pt, 'OnedayFF';
-        //font-family: $header-font, serif;
-        margin-top: 5px;
+        margin-top: -5px;
         font-family: $new-font;
         padding-top: -10px;
         font-weight: 700;
@@ -25,7 +23,6 @@
           text-decoration: none;
           color: $off-white;
           display: block;
-          //line-height: em;
         }
       }
     }

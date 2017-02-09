@@ -17,8 +17,8 @@ class ProjectSection extends Component {
     return <div className='projectItem'>
       <ul>
         <li className='title'><a onClick={this.potato}>{NewName[0]} is creating a {type}</a></li>
-        <li className='p_desc'>{need}</li>
         <li className='p_need'>{goal}</li>
+        <li className='p_desc'>{need}</li>
         <li>members</li>
         <div className='members'>
           {users.map((user, i) => {

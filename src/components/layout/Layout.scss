@@ -3,24 +3,21 @@
 
   header {
     display: flex;
-    margin-top: 0;
-    height: 65px;
+    height: 4.5em;
+    justify-content: space-between;
 
     .flexpush {
-      flex: 1;
-
       h1 {
         //font: 32pt, 'OnedayFF';
         //font-family: $header-font, serif;
         margin-top: 5px;
         font-family: $new-font;
-        //font-family: 'OnedayFF', serif;
+        padding-top: -10px;
         font-weight: 700;
         font-style: italic;
         letter-spacing: -5px;
         font-size: 5em;
         color: $off-white;
-        flex: 1;
         padding-left: 10px;
 
         a:link,
@@ -28,28 +25,13 @@
           text-decoration: none;
           color: $off-white;
           display: block;
-          line-height: 1em;
+          //line-height: em;
         }
       }
     }
 
     button {
       color: white;
-      text-align: center;
-      font-family: $text-font, serif;
-      font-size: 1em;
-      //padding-right: 10px;
-      //flex: 1;
-      background-color: transparent;
-      border-style: none;
-      width: 8em;
-      transition: all ease 0.4s;
-
-      &:hover {
-        //background-color: rgba(0, 0, 0, 0.25);
-        //transition: all 1s ease-in;
-        box-shadow: inset -100px 0 0 0 rgba(0, 0, 0, 0.25);
-      }
     }
 
     @keyframes background {

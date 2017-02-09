@@ -22,9 +22,10 @@ class FullDescription extends Component {
   }
 
   render () {
-    const { need, goal, owner, type, description } = this.props
+    const { name, need, goal, owner, type, description } = this.props
     // const project = data.projects.find(p => p.id === this.props.params.id)
-    return <div>
+    return <div className='desc'>
+      <h2>{name}</h2>
       <p>{need}</p>
       <p>{type}</p>
       <p>{owner.name}</p>

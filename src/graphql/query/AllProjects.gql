@@ -1,6 +1,7 @@
 query AllProjects {
   allProjects {
     id
+    name
     type
     need
     goal

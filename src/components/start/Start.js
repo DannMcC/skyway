@@ -9,8 +9,10 @@ class Start extends Component {
         <h1 className='comp-head'>Start your profile</h1>
         <h1 className='comp-exit'><Link to='/'>X</Link></h1>
       </div>
-      <h2><Link to='/submit'>Start a Project</Link></h2>
-      <h2><Link to='/profile'>Fill out your profile</Link></h2>
+      <div className='startOptions'>
+        <h2><Link to='/submit'>Start a Project</Link></h2>
+        <h2><Link to='/profile'>Fill out your profile</Link></h2>
+      </div>
     </div>
   }
 }
